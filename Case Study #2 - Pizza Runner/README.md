@@ -9,3 +9,5 @@ Because Danny had a few years of experience as a data scientist - he was very aw
 
 He has prepared for us an entity relationship diagram of his database design but requires further assistance to clean his data and apply some basic calculations so he can better direct his runners and optimise Pizza Runner’s operations.
 ## Entity Relationship Diagram
+![Table-pizza runners](https://github.com/Aditi-2512/8Weeks_SQL_Challenge/assets/137753595/f0c28a67-4b61-460b-b3db-49f440f1280b)
+So let us get started to solve all the given queries and help Danny! :blush:
