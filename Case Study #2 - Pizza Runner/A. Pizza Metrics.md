@@ -63,5 +63,18 @@ GROUP BY EXTRACT(HOUR FROM order_time);
 - The answer :
 <image src = "https://github.com/Aditi-2512/8Weeks_SQL_Challenge/assets/137753595/82d39688-24d6-4ce6-b12b-16a2f18c861b" height = '200' width = '250'>
 
+## 9. What was the volume of orders for each day of the week?
+``` sql
+SET DATESTYLE = 'ISO','DMY';
+
+SELECT TO_CHAR(order_time, 'Dy') AS day_of_the_week, COUNT(order_id)
+FROM pizza_runner.customer_orders_clean
+GROUP BY TO_CHAR(order_time, 'Dy')
+ORDER BY MIN(EXTRACT(DOW FROM order_time));
+```
+- I have converted the starting of the week to Monday and then did the query
+- The answer :
+<image src = "https://github.com/Aditi-2512/8Weeks_SQL_Challenge/assets/137753595/3215b04c-9f00-4040-a54e-6d4512781365" height = '150' width = '250'>
+
    
 
