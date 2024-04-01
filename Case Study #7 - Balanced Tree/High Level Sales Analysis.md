@@ -13,7 +13,7 @@ ON product_details.product_id = sales.prod_id
 GROUP BY product_details.product_name;
 ```
 - Answer :
-- 
+
 product_name | total_revenue
 --- | ---
 White Tee Shirt - Mens | 192736000
@@ -28,4 +28,26 @@ Blue Polo Shirt - Mens	| 276022044
 Indigo Rain Jacket - Womens | 89228750
 Cream Relaxed Jeans - Womens | 46078010
 Teal Button Up Shirt - Mens |45283320
+## 3. What was the total discount amount for all products?
+```sql
+SELECT product_details.product_name, SUM(sales.qty * sales.price * sales.discount/100) AS total_discount
+FROM balanced_tree.sales JOIN balanced_tree.product_details ON
+sales.prod_id = product_details.product_id
+GROUP BY product_details.product_name;
+```
+- Answer :
 
+product_name| total_discount
+--- | ---
+White Tee Shirt - Mens |	17968
+Navy Solid Socks - Mens	| 16059
+Grey Fashion Jacket - Womens |	24781
+Navy Oversized Jeans - Womens	|5538
+Pink Fluro Polkadot Socks - Mens|	12344
+Khaki Suit Jacket - Womens	| 9660
+Black Straight Jeans - Womens	| 14156
+White Striped Socks - Mens	| 6877
+Blue Polo Shirt - Mens	| 26189
+Indigo Rain Jacket - Womens |	8010
+Cream Relaxed Jeans - Womens |	3979
+Teal Button Up Shirt - Mens	| 3925
